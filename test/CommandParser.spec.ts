@@ -2,7 +2,10 @@ import {
   expect
 } from "chai";
 import constants from '../constants';
-
+const sinon = require("sinon");
+const chai = require("chai");
+const sinonChai = require("sinon-chai");
+chai.use(sinonChai);
 import CommandParser from '../src/classes/CommandParser';
 
 
@@ -48,7 +51,13 @@ suite('Testing CommandParser Class', () => {
 
     });
 
-
+    test('should handle errors correctly ', async () => {
+      const commandParser = new CommandParser("./wrong");
+      const cmdIterator = commandParser.parse();
+      sinon.spy(console, 'error');
+      cmdIterator.next()
+      expect(console.error).to.be.calledWith("#Error: ENOENT: no such file or directory, open './wrong'");
+    });
 
   });
 

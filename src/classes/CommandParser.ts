@@ -54,7 +54,7 @@ export default class CommandParser {
 
 
     } catch (e) {
-      liner.close();
+      liner && liner.close();
       Logger.error((e as Error).message, {
         lineNumber
       })
