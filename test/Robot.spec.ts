@@ -7,14 +7,14 @@ import Robot from '../src/classes/Robot';
 
 suite('Testing Robot Class', () => {
   suite(':Direction', () => {
-    test('should set direction correctly ', async () => {
+    test('should set direction correctly ',  () => {
       const robot = new Robot()
       expect(robot.direction).to.be.equal('');
       robot.direction = 'WEST';
       expect(robot.direction).to.be.equal('WEST');
     });
 
-    test('should rotateLeft() works correctly ', async () => {
+    test('should rotateLeft() works correctly ',  () => {
       const robot = new Robot()
       robot.direction = 'WEST';
 
@@ -29,7 +29,7 @@ suite('Testing Robot Class', () => {
 
     });
 
-    test('should rotateRight() works correctly ', async () => {
+    test('should rotateRight() works correctly ',  () => {
       const robot = new Robot()
       robot.direction = 'WEST';
 
@@ -45,7 +45,7 @@ suite('Testing Robot Class', () => {
     });
 
 
-    test('should walk() works correctly ', async () => {
+    test('should walk() works correctly ',  () => {
       const robot = new Robot()
       robot.direction = 'WEST';
       expect(robot.walk()).to.be.deep.equal({

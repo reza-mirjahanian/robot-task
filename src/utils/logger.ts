@@ -12,5 +12,8 @@ export default {
     if (extra) {
       console.error(extra)
     }
+  },
+  output: (message: string) => {
+
   }
 }

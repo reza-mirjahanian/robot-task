@@ -7,7 +7,7 @@ import Table from '../src/classes/Table';
 
 suite('Testing Table Class', () => {
   suite(':Locations', () => {
-    test('should set location correctly ', async () => {
+    test('should set location correctly ',  () => {
       const table = new Table()
       table.putObject(1,2)
       const {x,y} = table.getObjectLocation();
@@ -26,7 +26,7 @@ suite('Testing Table Class', () => {
 
     });
 
-    test('should active for correct location', async () => {
+    test('should active for correct location',  () => {
       const table = new Table()
       table.putObject(5,5)
       expect(table.isObjectActive).to.be.equal(false);
