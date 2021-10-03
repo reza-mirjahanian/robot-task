@@ -1,3 +1,4 @@
+
 ### Robot Task
 
 
@@ -9,6 +10,10 @@
 - `npm run coverage` - Runs code coverage.
 
 #### Assumptions
-- 💡 The origin (0,0)  be considered to be the SOUTH WEST most corner.
-- 💡 The first valid command to the robot is a PLACE command.
-
+- 💡 Moving the robot handled by Table. The robot only does the rotation.
+- 💡 For reading command (`*parse`) I've used [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) technic.
+- 💡 There is a `constant` file for configuration.
+- 💡 The origin (0,0) considered to be the `SOUTH WEST` most corner.
+- 💡 The first valid command to the robot is a `PLACE` command.
+- 💡 `src` folder for source, `test` for test cases, `testData` for commands list
+- 
