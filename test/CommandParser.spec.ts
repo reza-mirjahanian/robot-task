@@ -11,7 +11,7 @@ import CommandParser from '../src/classes/CommandParser';
 
 suite('Testing CommandParser Class', () => {
   suite('*Parse() - generators', () => {
-    test('should return lines correctly ', async () => {
+    test('should return lines correctly ',  () => {
       const commandParser = new CommandParser(constants.TEST_DATA_ONE);
       const cmdIterator = commandParser.parse();
       expect(cmdIterator.next().value).to.be.deep.equal({
@@ -51,7 +51,7 @@ suite('Testing CommandParser Class', () => {
 
     });
 
-    test('should handle errors correctly ', async () => {
+    test('should handle errors correctly ',  () => {
       const commandParser = new CommandParser("./wrong");
       const cmdIterator = commandParser.parse();
       sinon.spy(console, 'error');

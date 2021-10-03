@@ -14,6 +14,6 @@ export default {
     }
   },
   output: (message: string) => {
-
+    console.log(message)
   }
 }
