@@ -4,11 +4,12 @@
   "description": "",
   "main": "src",
   "scripts": {
-    "build": "tsc",
-    "run": " ts-node ./src",
-    "test-watch": "nodemon --config nodemon.json  -x npm run test",
+    "start": " ts-node ./src",
+    "start-watch": "nodemon --config nodemon.json -x npm start",
     "test": "cross-env NODE_ENV='test' ts-node ./node_modules/mocha/bin/mocha  --ui tdd  --timeout=10000 --exit ./test/**/*.spec.ts",
-    "coverage": "cross-env NODE_ENV='test'  node_modules/nyc/bin/nyc.js   npm run test"
+    "test-watch": "nodemon --config nodemon.json  -x npm run test",
+    "coverage": "cross-env NODE_ENV='test'  node_modules/nyc/bin/nyc.js   npm run test",
+    "build": "tsc"
   },
   "author": "Reza Mirjahanian",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "typescript": "^4.3.5",
     "chai": "4.3.4",
     "sinon-chai": "3.7.0",
+    "sinon": "4.4.9",
     "eslint": "7.30.0",
     "mocha": "9.0.2",
     "nyc": "15.1.0",
@@ -26,6 +28,9 @@
     "cross-env": "7.0.3"
   },
   "dependencies": {
-    "@types/node": "^16.0.0"
+    "@types/lodash": "^4.14.175",
+    "@types/node": "^16.0.0",
+    "lodash": "4.17.21",
+    "n-readlines": "1.0.1"
   }
 }

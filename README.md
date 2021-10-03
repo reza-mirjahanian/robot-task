@@ -9,4 +9,6 @@
 - `npm run coverage` - Runs code coverage.
 
 #### Assumptions
-💡  -
+- 💡 The origin (0,0)  be considered to be the SOUTH WEST most corner.
+- 💡 The first valid command to the robot is a PLACE command.
+
