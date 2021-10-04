@@ -1,6 +1,5 @@
-import constants from '../../constants';
+
 import Logger from '../utils/logger';
-import CommandParser from './CommandParser';
 import Table from './Table';
 import Robot from './Robot';
 import {
@@ -10,13 +9,11 @@ import {
 
 export default class Manager {
 
-    run(){
+    run(commands: Generator<{ args: {}, name: string }>){
         const robot = new Robot();
         const table = new Table();
 
-        const commandParser = new CommandParser(constants.TEST_DATA_ONE);
-
-        for (let commandBag of commandParser.parse()) {
+        for (let commandBag of commands ) {
             const command = commandBag.name;
 
             if (command === 'PLACE') {

@@ -1,7 +1,7 @@
 import {
   expect
 } from "chai";
-import constants from '../constants';
+import constants from '../src/constants';
 const sinon = require("sinon");
 const chai = require("chai");
 const sinonChai = require("sinon-chai");
