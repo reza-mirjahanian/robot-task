@@ -7,7 +7,7 @@ const VALID_COMMANDS = ['MOVE',
   'REPORT'
 ]
 
-const PLACE_COMMANDS_REGEX = /PLACE\s+(\d+)\s*,\s*(\d+)\s*,\s*(NORTH|SOUTH|EAST|WEST)/g;
+const PLACE_COMMANDS_REGEX = /^PLACE\s+(\d+)\s*,\s*(\d+)\s*,\s*(NORTH|SOUTH|EAST|WEST)$/g;
 
 export default class CommandParser {
 
